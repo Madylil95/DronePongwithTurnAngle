@@ -58,7 +58,7 @@ public class BebopActivity extends AppCompatActivity {
     private Button mTakeOffLandBt;
     private Button mDownloadBt;
 
-    private Double wallAngle = 1;
+    private Double wallAngle = 1.0;
     private int turnAngle = 0;              //angle that drone must turn
     private boolean inPlay = false;         //bool to determine game if in play or not.
 
@@ -175,7 +175,7 @@ public class BebopActivity extends AppCompatActivity {
                                     final String data = new String(encodedBytes, "US-ASCII");
                                     readBufferPosition = 0;
                                     Log.i("hello lily",data);
-                                    Double wallAngle = Double.parseDouble(data);
+                                    wallAngle = Double.parseDouble(data);
 
                                     turnAngle = wallAngle.intValue();           //converts string to whole number int
 
